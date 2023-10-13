@@ -10,7 +10,7 @@
     column-gap: 16px;
   }
   .preview_pic {
-    background:  #7F969C;
+    background: #7F969C;;
   }
 
   .chat_headerTitle {  
@@ -63,7 +63,7 @@
 }
 
 .bubble {
-  max-width: 640px;
+  max-width:600px;
   position: relative;
   background: white;
   padding:10px;
@@ -92,19 +92,22 @@
   .preview_pic { display:none; }
 
   .bubble_wrap {
+    align-items:flex-end;
+    
     .preview_nick{ display:none; }
     .buuble_content {
       flex-direction: row-reverse;
       .bubble {
-        background: #80B2C9;
+        background:#80B2C9;
 
-        &:before{
+
+        &::before{
           border-right: 10px solid transparent;
           border-top: 10px solid #80B2C9;
           left:auto; right:-10px; 
       }
-
       }
+      
     }
   }
 
@@ -128,7 +131,7 @@
     .chat_formUtilPlugin {
       i { 
         margin-right:10px;
-        color: #80B2C9;;
+        color: $gray3;
         &:hover {
           color: $main-color;
         }

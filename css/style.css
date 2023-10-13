@@ -1,4 +1,4 @@
-.chat_form .chat_formUtil, .chat .chat_headerTitle div, .preview_column:nth-child(2), .header, nav {
+.chat_form .chat_formUtil, .chat .chat_headerTitle div, .preview_column:nth-child(2), .previews a.preview_wrap .preview .preview_column:nth-child(2), .header, nav {
   display: flex;
   justify-content: space-between;
 }
@@ -169,8 +169,8 @@ nav .nav_list.nav_bottom li {
 .header {
   position: sticky;
   top: 0;
-  background: #CED4DA;
   padding: 40px 20px 20px;
+  background: #CED4DA;
   z-index: 10;
 }
 .header .header_title {
@@ -182,7 +182,7 @@ nav .nav_list.nav_bottom li {
   border-radius: 50%;
   display: inline-block;
   background: #B1B4C1;
-  line-height: 32px;
+  line-height: 36px;
   text-align: center;
 }
 .header .header_menu span:hover {
@@ -199,8 +199,57 @@ nav .nav_list.nav_bottom li {
   padding: 16px;
   column-gap: 16px;
 }
+.previews a.preview_wrap .preview .preview_column .preview_pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  background: #7F969C;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.previews a.preview_wrap .preview .preview_column .preview_pic i {
+  font-size: 2.4em;
+  color: #ACA9BB;
+}
+.previews a.preview_wrap .preview .preview_column:nth-child(2) {
+  column-gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+.previews a.preview_wrap .preview .preview_column:nth-child(2) div {
+  width: auto;
+}
+.previews a.preview_wrap .preview .preview_column .preview_nick {
+  width: 50vw;
+  font-size: 0.85em;
+  font-weight: 300;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.previews a.preview_wrap .preview .preview_column .preview_msg {
+  font-size: 0.8em;
+  font-weight: 200;
+  color: #5D7E7D;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.previews a.preview_wrap .preview .preview_column .preview_time {
+  width: 55px;
+  white-space: nowrap;
+  font-size: 0.7em;
+  font-weight: 200;
+  color: #7F969C;
+}
 .previews a.preview_wrap:hover {
-  background: #EEFBFF;
+  background: rgba(56, 30, 31, 0.1);
 }
 
 .preview_column .preview_pic {
@@ -220,8 +269,10 @@ nav .nav_list.nav_bottom li {
 .preview_column:nth-child(2) {
   column-gap: 10px;
   align-items: center;
-  width: 100% div;
-  width-width: auto;
+  width: 100%;
+}
+.preview_column:nth-child(2) div {
+  width: auto;
 }
 .preview_column .preview_nick {
   width: 50vw;
@@ -244,7 +295,6 @@ nav .nav_list.nav_bottom li {
   text-overflow: ellipsis;
 }
 .preview_column .preview_time {
-  border: 1px solid orange;
   width: 55px;
   white-space: nowrap;
   font-size: 0.7em;
@@ -304,7 +354,7 @@ nav .nav_list.nav_bottom li {
 }
 
 .bubble {
-  max-width: 640px;
+  max-width: 600px;
   position: relative;
   background: white;
   padding: 10px;
@@ -330,6 +380,9 @@ nav .nav_list.nav_bottom li {
 .bubble_preview.my .preview_pic {
   display: none;
 }
+.bubble_preview.my .bubble_wrap {
+  align-items: flex-end;
+}
 .bubble_preview.my .bubble_wrap .preview_nick {
   display: none;
 }
@@ -339,7 +392,7 @@ nav .nav_list.nav_bottom li {
 .bubble_preview.my .bubble_wrap .buuble_content .bubble {
   background: #80B2C9;
 }
-.bubble_preview.my .bubble_wrap .buuble_content .bubble:before {
+.bubble_preview.my .bubble_wrap .buuble_content .bubble::before {
   border-right: 10px solid transparent;
   border-top: 10px solid #80B2C9;
   left: auto;
@@ -363,7 +416,7 @@ nav .nav_list.nav_bottom li {
 }
 .chat_form .chat_formUtil .chat_formUtilPlugin i {
   margin-right: 10px;
-  color: #80B2C9;
+  color: #7F969C;
 }
 .chat_form .chat_formUtil .chat_formUtilPlugin i:hover {
   color: #474554;
