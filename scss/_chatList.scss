@@ -1,0 +1,145 @@
+nav {
+  @include set-box(70px);
+
+  position: fixed;
+  background: #CED4DA;
+  padding: 50px 0;
+  @extend %double;
+  flex-direction: column;
+
+
+
+  .nav_list {
+
+    li {
+      text-align: center;
+      color: #765562;
+      padding: 10px 0;
+      
+      &:nth-child(2) {
+        padding-top: 16px;
+        color:$main-color;
+      }
+
+      &:hover { color: #80B2C9; }
+    }
+
+    &.nav_bottom {
+      li { padding: 8px 0; }
+    }
+  }
+}
+
+.chats {
+
+  margin-left: 70px;
+}
+
+.header {
+  position: sticky; top: 0;
+  background: #CED4DA;
+  padding: 40px 20px 20px;
+  @extend %double;
+
+  z-index: 10;
+
+  .header_title {
+    font-size: 1.4em;
+  }
+  
+  .header_menu {
+
+    span {
+      @include set-box(32px, 32px, 50%);
+      display: inline-block;
+      background: #B1B4C1;
+      line-height: 32px;
+      text-align: center;
+
+      &:hover {
+        background: #80B2C9;
+      }
+
+    }
+  }
+  
+
+
+}
+
+.previews{
+  a.preview_wrap{
+    display: block;
+    transition: 0.3s;
+
+    .preview {
+      display: flex; align-items: center;
+      padding:16px;
+      column-gap: 16px; 
+    }
+
+    &:hover {
+      background: #EEFBFF;
+    }
+  }
+}
+
+// 다른 부분에서 써줄 수 있게 밖으로 뺴줌
+.preview_column {
+  .preview_pic { 
+    @include set-box(50px, 50px, 16px );
+    background: $gray3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+    i {
+      font-size: 2.4em;
+      color: $main-color2;
+    }
+
+  }
+  &:nth-child(2){
+    @extend %double;
+    column-gap: 10px;
+    align-items:center;
+    width:100%
+
+    div{ width:auto;}
+  }
+  .preview_nick{ 
+    width:50vw;
+    font: {
+      size:0.85em;
+      weight:300;
+    }
+      margin-bottom:8px; 
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+    }
+  .preview_msg{
+
+    font-size:0.8em;
+    font-weight:200;
+    color:$gray2;
+
+    // 2줄만 보이게
+    display:-webkit-box;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+  .preview_time {
+    border:1px solid orange;
+    width:55px;
+    white-space: nowrap;
+    font-size:0.7em;
+    font-weight:200;
+    color:$gray3;
+  }
+}

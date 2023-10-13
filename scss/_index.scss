@@ -1,0 +1,100 @@
+#login_container {
+  width: 100%;
+  height: 100%;
+  background-color: $bg-color;
+
+}
+
+.login {
+  border: 2px solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+
+h1 {
+  height:90px; width:95px;
+  text-indent:-9999px;
+  background: {
+    image:url('../img/login_logo.png');      
+    repeat:no-repeat;
+    position:center;      
+    size:auto 100%;
+  }
+  margin-bottom:20px;
+  }
+
+  .login_account {
+    font-size: 0.9em;
+    color: $gray1;
+
+    a { margin: 0 5px;}
+    span { color: $opacity1;}
+    
+  }
+}
+
+.login_form {
+  width: 240px;
+  margin-bottom: 100px;
+
+
+  input {
+    width: 240px;
+    height: 40px;
+    border: 1px solid $opacity1;
+    outline: none;
+
+    &:placeholder { color: $gray2; }
+  }
+
+  .login_formId {
+    border-bottom: none;
+    padding-left: 10px;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .login_form {
+    border-bottom: none;
+    padding-left: 10px;
+    border-radius: 6px 6px 0 0;
+  }
+  .login_formPw {
+    border-top-color: $opacity2 ;
+    padding-left: 10px;
+    border-radius: 0 0 6px 6px;
+  }
+  .login_formBtn {
+    background: $main-color;
+    color:$gray3;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background:$main-color2;
+    }
+
+  }
+  
+  .login_formCheck {
+    appearance: unset;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid $main-color;
+
+    &:checked {
+      background: $main-color;
+      border: 1px solid $gray4;
+    }
+
+  }
+  label {
+    font-size: 0.9em;
+    color: $gray1;
+  }
+  
+}
